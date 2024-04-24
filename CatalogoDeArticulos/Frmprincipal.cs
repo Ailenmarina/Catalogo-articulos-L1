@@ -46,5 +46,23 @@ namespace CatalogoDeArticulos
         {
 
         }
+
+        private void agregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregarArticulo ventana = new FormAgregarArticulo();
+            ventana.Show();
+        }
+
+        private void buscarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBuscarArticulo ventana = new FormBuscarArticulo();
+            ventana.Show();
+        }
+
+        private void modificarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModificarArticulo ventana = new FormModificarArticulo();
+            ventana.Show();
+        }
     }
 }

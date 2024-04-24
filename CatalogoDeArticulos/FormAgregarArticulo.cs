@@ -26,5 +26,10 @@ namespace CatalogoDeArticulos
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se ha guardado exitosamente");
+        }
     }
 }
