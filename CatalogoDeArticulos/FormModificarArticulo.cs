@@ -49,5 +49,12 @@ namespace CatalogoDeArticulos
             cboOpcionesArticulo.Items.Add("Imagen");
             cboOpcionesArticulo.Items.Add("Precio");
         }
+
+        private void FormModificarArticulo_Load_1(object sender, EventArgs e)
+        {
+            cboOpcionesArticulo.Items.Add("Opcion 1");
+            cboOpcionesArticulo.Items.Add("Opcion 2");
+            cboOpcionesArticulo.Items.Add("Opcion 3");
+        }
     }
 }
