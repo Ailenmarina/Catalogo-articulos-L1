@@ -64,5 +64,10 @@ namespace CatalogoDeArticulos
             FormModificarArticulo ventana = new FormModificarArticulo();
             ventana.Show();
         }
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
