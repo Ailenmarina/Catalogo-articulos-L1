@@ -69,5 +69,11 @@ namespace CatalogoDeArticulos
         {
 
         }
+
+        private void verTodosLosArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVerTodosArticulos ventana= new FormVerTodosArticulos();
+            ventana.Show();
+        }
     }
 }

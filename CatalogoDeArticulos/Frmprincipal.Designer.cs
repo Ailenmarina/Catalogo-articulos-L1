@@ -119,6 +119,7 @@
             this.verTodosLosArticulosToolStripMenuItem.Name = "verTodosLosArticulosToolStripMenuItem";
             this.verTodosLosArticulosToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.verTodosLosArticulosToolStripMenuItem.Text = "Ver todos los articulos";
+            this.verTodosLosArticulosToolStripMenuItem.Click += new System.EventHandler(this.verTodosLosArticulosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem
             // 
@@ -131,7 +132,7 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.administrarToolStripMenuItem.Text = "Administrar";
             // 
             // marcasToolStripMenuItem
@@ -145,7 +146,7 @@
             // administrarToolStripMenuItem1
             // 
             this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
-            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(169, 26);
+            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.administrarToolStripMenuItem1.Text = "Administrar";
             // 
             // Frmprincipal
@@ -157,7 +158,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frmprincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana principal";

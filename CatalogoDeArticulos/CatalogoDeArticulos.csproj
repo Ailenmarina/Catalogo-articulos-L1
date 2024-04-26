@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Articulo.cs" />
+    <Compile Include="ArticuloServer.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="FormAgregarArticulo.cs">
       <SubType>Form</SubType>
@@ -67,6 +68,12 @@
     <Compile Include="FormModificarArticulo.Designer.cs">
       <DependentUpon>FormModificarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerTodosArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerTodosArticulos.Designer.cs">
+      <DependentUpon>FormVerTodosArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frmprincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificarArticulo.resx">
       <DependentUpon>FormModificarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerTodosArticulos.resx">
+      <DependentUpon>FormVerTodosArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frmprincipal.resx">
       <DependentUpon>Frmprincipal.cs</DependentUpon>
