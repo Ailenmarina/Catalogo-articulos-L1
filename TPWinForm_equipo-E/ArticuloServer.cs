@@ -24,9 +24,9 @@ namespace CatalogoDeArticulos
 
             try
             {
-                Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                Conex.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "Select A.Id, I.Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, IdArticulo, ImagenUrl From ARTICULOS A, IMAGENES I Where A.Id= I.Id";
+                Comando.CommandText = "SELECT A.Id, I.Id AS ImagenId, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, CAST(Precio AS DECIMAL(18, 2)) AS Precio, ImagenUrl FROM ARTICULOS A INNER JOIN IMAGENES I ON A.Id = I.IdArticulo";
                 Comando.Connection = Conex;
                 
 
@@ -43,11 +43,13 @@ namespace CatalogoDeArticulos
                     aux.Descripcion = (string)Lector["Descripcion"];
                     aux.IdMarca = (int)Lector["IdMarca"];
                     aux.IdCategoria = (int)Lector["IdCategoria"];
-                    //Arreglar
-                    //aux.precio = (SqlMoney)Lector["Precio"]; 
-                    aux.ImagenUrl = new Imagen();
-                    aux.ImagenUrl.ImagenURL=(string)Lector["ImagenUrl"];
-                 
+                    aux.Precio = (decimal)Lector["Precio"];
+
+                    Imagen imagen = new Imagen();
+                    imagen.ID= (int)Lector["ImagenId"];
+                    imagen.ImagenURL = (string)Lector["ImagenUrl"];
+                    aux.Imagenes.Add(imagen);
+
 
                     Lista.Add(aux);
                 }
@@ -60,6 +62,11 @@ namespace CatalogoDeArticulos
 
                 throw ex; 
             }
+        }
+
+        public void Agregar(Articulo nuevo)
+        {
+
         }
     }
 }

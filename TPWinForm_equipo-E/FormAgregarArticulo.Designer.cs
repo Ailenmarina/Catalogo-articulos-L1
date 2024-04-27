@@ -29,21 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCodigoArt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textNombreArt = new System.Windows.Forms.TextBox();
+            this.textDescripcionArt = new System.Windows.Forms.TextBox();
+            this.textImagenURL = new System.Windows.Forms.TextBox();
+            this.textPrecio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,12 +53,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo de articulo:";
             // 
-            // textBox1
+            // textCodigoArt
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 1;
+            this.textCodigoArt.Location = new System.Drawing.Point(188, 46);
+            this.textCodigoArt.Name = "textCodigoArt";
+            this.textCodigoArt.Size = new System.Drawing.Size(127, 20);
+            this.textCodigoArt.TabIndex = 1;
+            this.textCodigoArt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -117,33 +116,33 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Precio:";
             // 
-            // textBox2
+            // textNombreArt
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(127, 20);
-            this.textBox2.TabIndex = 8;
+            this.textNombreArt.Location = new System.Drawing.Point(188, 77);
+            this.textNombreArt.Name = "textNombreArt";
+            this.textNombreArt.Size = new System.Drawing.Size(127, 20);
+            this.textNombreArt.TabIndex = 8;
             // 
-            // textBox3
+            // textDescripcionArt
             // 
-            this.textBox3.Location = new System.Drawing.Point(188, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 20);
-            this.textBox3.TabIndex = 9;
+            this.textDescripcionArt.Location = new System.Drawing.Point(188, 108);
+            this.textDescripcionArt.Name = "textDescripcionArt";
+            this.textDescripcionArt.Size = new System.Drawing.Size(127, 20);
+            this.textDescripcionArt.TabIndex = 9;
             // 
-            // textBox5
+            // textImagenURL
             // 
-            this.textBox5.Location = new System.Drawing.Point(188, 206);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 20);
-            this.textBox5.TabIndex = 11;
+            this.textImagenURL.Location = new System.Drawing.Point(188, 206);
+            this.textImagenURL.Name = "textImagenURL";
+            this.textImagenURL.Size = new System.Drawing.Size(127, 20);
+            this.textImagenURL.TabIndex = 11;
             // 
-            // textBox6
+            // textPrecio
             // 
-            this.textBox6.Location = new System.Drawing.Point(188, 238);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(127, 20);
-            this.textBox6.TabIndex = 12;
+            this.textPrecio.Location = new System.Drawing.Point(188, 238);
+            this.textPrecio.Name = "textPrecio";
+            this.textPrecio.Size = new System.Drawing.Size(127, 20);
+            this.textPrecio.TabIndex = 12;
             // 
             // button1
             // 
@@ -155,51 +154,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(240, 308);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Location = new System.Drawing.Point(188, 171);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.domainUpDown1.TabIndex = 15;
-            this.domainUpDown1.Text = "Seleccionar";
-            // 
-            // domainUpDown2
-            // 
-            this.domainUpDown2.Location = new System.Drawing.Point(188, 139);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.domainUpDown2.TabIndex = 16;
-            this.domainUpDown2.Text = "Seleccionar";
+            this.buttonCancelar.Location = new System.Drawing.Point(240, 308);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 14;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // FormAgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.domainUpDown2);
-            this.Controls.Add(this.domainUpDown1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textPrecio);
+            this.Controls.Add(this.textImagenURL);
+            this.Controls.Add(this.textDescripcionArt);
+            this.Controls.Add(this.textNombreArt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textCodigoArt);
             this.Controls.Add(this.label1);
             this.Name = "FormAgregarArticulo";
             this.Text = "Agregar Articulo";
@@ -211,20 +193,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textCodigoArt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textNombreArt;
+        private System.Windows.Forms.TextBox textDescripcionArt;
+        private System.Windows.Forms.TextBox textImagenURL;
+        private System.Windows.Forms.TextBox textPrecio;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }

@@ -17,7 +17,13 @@ namespace CatalogoDeArticulos
         public int IdCategoria { get; set; }
        public Marca Marca { get; set; }
        public Categoria Categoria { get; set; }
-        public Imagen ImagenUrl { get; set; }
-        //public SqlMoney precio { get; set; }
+       
+       public List<Imagen> Imagenes { get; set; }
+        public decimal Precio { get; set; }
+
+        public Articulo()
+        {
+            Imagenes = new List<Imagen>();
+        }
     }
 }

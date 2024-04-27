@@ -38,17 +38,19 @@
             // 
             this.DgvVerTodosArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvVerTodosArticulos.Location = new System.Drawing.Point(0, 0);
+            this.DgvVerTodosArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvVerTodosArticulos.Name = "DgvVerTodosArticulos";
             this.DgvVerTodosArticulos.RowHeadersWidth = 51;
             this.DgvVerTodosArticulos.RowTemplate.Height = 24;
-            this.DgvVerTodosArticulos.Size = new System.Drawing.Size(602, 217);
+            this.DgvVerTodosArticulos.Size = new System.Drawing.Size(452, 176);
             this.DgvVerTodosArticulos.TabIndex = 0;
             // 
             // pictureBoxArticulo
             // 
-            this.pictureBoxArticulo.Location = new System.Drawing.Point(608, 0);
+            this.pictureBoxArticulo.Location = new System.Drawing.Point(479, 0);
+            this.pictureBoxArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxArticulo.Name = "pictureBoxArticulo";
-            this.pictureBoxArticulo.Size = new System.Drawing.Size(299, 217);
+            this.pictureBoxArticulo.Size = new System.Drawing.Size(201, 176);
             this.pictureBoxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxArticulo.TabIndex = 1;
             this.pictureBoxArticulo.TabStop = false;
@@ -57,11 +59,12 @@
             // 
             // FormVerTodosArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 450);
+            this.ClientSize = new System.Drawing.Size(700, 366);
             this.Controls.Add(this.pictureBoxArticulo);
             this.Controls.Add(this.DgvVerTodosArticulos);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormVerTodosArticulos";
             this.Text = "FormVerTodosArticulos";
             this.Load += new System.EventHandler(this.FormVerTodosArticulos_Load);
