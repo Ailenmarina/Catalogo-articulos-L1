@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.DgvVerTodosArticulos = new System.Windows.Forms.DataGridView();
+            this.pictureBoxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVerTodosArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvVerTodosArticulos
@@ -42,16 +44,29 @@
             this.DgvVerTodosArticulos.Size = new System.Drawing.Size(602, 217);
             this.DgvVerTodosArticulos.TabIndex = 0;
             // 
+            // pictureBoxArticulo
+            // 
+            this.pictureBoxArticulo.Location = new System.Drawing.Point(608, 0);
+            this.pictureBoxArticulo.Name = "pictureBoxArticulo";
+            this.pictureBoxArticulo.Size = new System.Drawing.Size(299, 217);
+            this.pictureBoxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxArticulo.TabIndex = 1;
+            this.pictureBoxArticulo.TabStop = false;
+            this.pictureBoxArticulo.Click += new System.EventHandler(this.pictureBoxArticulo_Click);
+            this.pictureBoxArticulo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxArticulo_MouseClick);
+            // 
             // FormVerTodosArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.pictureBoxArticulo);
             this.Controls.Add(this.DgvVerTodosArticulos);
             this.Name = "FormVerTodosArticulos";
             this.Text = "FormVerTodosArticulos";
             this.Load += new System.EventHandler(this.FormVerTodosArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvVerTodosArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -59,5 +74,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvVerTodosArticulos;
+        private System.Windows.Forms.PictureBox pictureBoxArticulo;
     }
 }

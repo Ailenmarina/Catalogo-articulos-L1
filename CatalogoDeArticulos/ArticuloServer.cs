@@ -26,7 +26,7 @@ namespace CatalogoDeArticulos
             {
                 Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "Select Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio From ARTICULOS";
+                Comando.CommandText = "Select A.Id, I.Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio, IdArticulo, ImagenUrl From ARTICULOS A, IMAGENES I Where A.Id= I.Id";
                 Comando.Connection = Conex;
                 
 
@@ -36,14 +36,17 @@ namespace CatalogoDeArticulos
                 while (Lector.Read())
                 {
                     Articulo aux = new Articulo();
+                    
                     aux.ID = (int)Lector["Id"];
                     aux.Codigo = (string)Lector["Codigo"];
                     aux.Nombre = (string)Lector["Nombre"];
                     aux.Descripcion = (string)Lector["Descripcion"];
                     aux.IdMarca = (int)Lector["IdMarca"];
                     aux.IdCategoria = (int)Lector["IdCategoria"];
+                    //Arreglar
                     //aux.precio = (SqlMoney)Lector["Precio"]; 
-
+                    aux.ImagenUrl = new Imagen();
+                    aux.ImagenUrl.ImagenURL=(string)Lector["ImagenUrl"];
                  
 
                     Lista.Add(aux);
