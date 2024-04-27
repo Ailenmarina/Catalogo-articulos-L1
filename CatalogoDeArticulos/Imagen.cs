@@ -9,7 +9,7 @@ namespace CatalogoDeArticulos
     internal class Imagen
     {
        public int ID { get; set; }
-       public Articulo Articulo { get; set; }
+       public int IdArticulo { get; set; }
         public string ImagenURL { get; set; }
 
     }
