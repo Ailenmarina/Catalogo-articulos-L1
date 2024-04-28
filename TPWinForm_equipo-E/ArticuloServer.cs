@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Security.AccessControl;
 
 
 namespace CatalogoDeArticulos
@@ -14,7 +15,7 @@ namespace CatalogoDeArticulos
             SqlConnection Conex = new SqlConnection();
             SqlCommand Comando = new SqlCommand();
             SqlDataReader Lector;
-
+            
             try
             {
                 Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
@@ -79,6 +80,23 @@ namespace CatalogoDeArticulos
             {
                 datos.cerrarConexion();
             }
-        }   
+        }  
+        
+        public void Eliminar(int ID)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from ARTICULOS where Id = @Id");
+                datos.setearParametro("@Id", ID);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }

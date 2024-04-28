@@ -75,5 +75,11 @@ namespace CatalogoDeArticulos
             FormVerTodosArticulos ventana= new FormVerTodosArticulos();
             ventana.Show();
         }
+
+        private void eliminarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EliminarArticulo ventana=new EliminarArticulo(); ;
+            ventana.Show();
+        }
     }
 }
