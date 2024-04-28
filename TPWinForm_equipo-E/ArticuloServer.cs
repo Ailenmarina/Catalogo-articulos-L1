@@ -24,7 +24,7 @@ namespace CatalogoDeArticulos
 
             try
             {
-                Conex.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+                Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
                 Comando.CommandText = "SELECT A.Id, I.Id AS ImagenId, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, CAST(Precio AS DECIMAL(18, 2)) AS Precio, ImagenUrl FROM ARTICULOS A INNER JOIN IMAGENES I ON A.Id = I.IdArticulo";
                 Comando.Connection = Conex;

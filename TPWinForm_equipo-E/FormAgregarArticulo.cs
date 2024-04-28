@@ -60,5 +60,10 @@ namespace CatalogoDeArticulos
         {
 
         }
+
+        private void FormAgregarArticulo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
