@@ -42,6 +42,8 @@
             this.textPrecio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.textIdMarcaArt = new System.Windows.Forms.TextBox();
+            this.textIdCategoriaArt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +59,7 @@
             // textCodigoArt
             // 
             this.textCodigoArt.Location = new System.Drawing.Point(251, 57);
-            this.textCodigoArt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textCodigoArt.Margin = new System.Windows.Forms.Padding(4);
             this.textCodigoArt.Name = "textCodigoArt";
             this.textCodigoArt.Size = new System.Drawing.Size(168, 22);
             this.textCodigoArt.TabIndex = 1;
@@ -89,9 +91,10 @@
             this.label4.Location = new System.Drawing.Point(116, 180);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 16);
+            this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Marca:";
+            this.label4.Text = "IdMarca:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -99,9 +102,9 @@
             this.label5.Location = new System.Drawing.Point(116, 219);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 16);
+            this.label5.Size = new System.Drawing.Size(80, 16);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Categoria:";
+            this.label5.Text = "IdCategoria:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -127,7 +130,7 @@
             // textNombreArt
             // 
             this.textNombreArt.Location = new System.Drawing.Point(251, 95);
-            this.textNombreArt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNombreArt.Margin = new System.Windows.Forms.Padding(4);
             this.textNombreArt.Name = "textNombreArt";
             this.textNombreArt.Size = new System.Drawing.Size(168, 22);
             this.textNombreArt.TabIndex = 8;
@@ -135,7 +138,7 @@
             // textDescripcionArt
             // 
             this.textDescripcionArt.Location = new System.Drawing.Point(251, 133);
-            this.textDescripcionArt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDescripcionArt.Margin = new System.Windows.Forms.Padding(4);
             this.textDescripcionArt.Name = "textDescripcionArt";
             this.textDescripcionArt.Size = new System.Drawing.Size(168, 22);
             this.textDescripcionArt.TabIndex = 9;
@@ -143,7 +146,7 @@
             // textImagenURL
             // 
             this.textImagenURL.Location = new System.Drawing.Point(251, 254);
-            this.textImagenURL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textImagenURL.Margin = new System.Windows.Forms.Padding(4);
             this.textImagenURL.Name = "textImagenURL";
             this.textImagenURL.Size = new System.Drawing.Size(168, 22);
             this.textImagenURL.TabIndex = 11;
@@ -151,7 +154,7 @@
             // textPrecio
             // 
             this.textPrecio.Location = new System.Drawing.Point(251, 293);
-            this.textPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(168, 22);
             this.textPrecio.TabIndex = 12;
@@ -159,7 +162,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(120, 379);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 13;
@@ -170,7 +173,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Location = new System.Drawing.Point(320, 379);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(100, 28);
             this.buttonCancelar.TabIndex = 14;
@@ -178,11 +181,30 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // textIdMarcaArt
+            // 
+            this.textIdMarcaArt.Location = new System.Drawing.Point(251, 180);
+            this.textIdMarcaArt.Margin = new System.Windows.Forms.Padding(4);
+            this.textIdMarcaArt.Name = "textIdMarcaArt";
+            this.textIdMarcaArt.Size = new System.Drawing.Size(168, 22);
+            this.textIdMarcaArt.TabIndex = 15;
+            this.textIdMarcaArt.TextChanged += new System.EventHandler(this.textIdMarcaArt_TextChanged);
+            // 
+            // textIdCategoriaArt
+            // 
+            this.textIdCategoriaArt.Location = new System.Drawing.Point(251, 219);
+            this.textIdCategoriaArt.Margin = new System.Windows.Forms.Padding(4);
+            this.textIdCategoriaArt.Name = "textIdCategoriaArt";
+            this.textIdCategoriaArt.Size = new System.Drawing.Size(168, 22);
+            this.textIdCategoriaArt.TabIndex = 16;
+            // 
             // FormAgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textIdCategoriaArt);
+            this.Controls.Add(this.textIdMarcaArt);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textPrecio);
@@ -197,7 +219,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textCodigoArt);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAgregarArticulo";
             this.Text = "Agregar Articulo";
             this.Load += new System.EventHandler(this.FormAgregarArticulo_Load);
@@ -222,5 +244,7 @@
         private System.Windows.Forms.TextBox textPrecio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.TextBox textIdMarcaArt;
+        private System.Windows.Forms.TextBox textIdCategoriaArt;
     }
 }
