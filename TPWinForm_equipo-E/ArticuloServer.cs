@@ -62,7 +62,13 @@ namespace CatalogoDeArticulos
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, UrlImagen, Precio)values(" + nuevo.Codigo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + ", '" + nuevo.IdMarca+ ", '" + nuevo.IdCategoria + ", '" + nuevo.Precio);
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                datos.setearParametro("@Codigo", nuevo.Codigo);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Descripcion", nuevo.Descripcion);
+                datos.setearParametro("@IdMarca", nuevo.IdMarca);
+                datos.setearParametro("@IdCategoria", nuevo.IdCategoria);
+                datos.setearParametro("@Precio", nuevo.Precio);
                 datos.ejecutarAccion();
             }
             catch ( Exception exe)
@@ -73,6 +79,6 @@ namespace CatalogoDeArticulos
             {
                 datos.cerrarConexion();
             }
-        }
+        }   
     }
 }

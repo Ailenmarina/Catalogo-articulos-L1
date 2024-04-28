@@ -42,7 +42,6 @@ namespace CatalogoDeArticulos
                 articulo.Descripcion= textDescripcionArt.Text;
                 articulo.IdMarca = int.Parse(textIdMarcaArt.Text);
                 articulo.IdCategoria=int.Parse(textIdCategoriaArt.Text);
-                articulo.Imagenes = ListaImagenes;
                 articulo.Precio=decimal.Parse(textPrecio.Text);
                 articuloServer.Agregar(articulo);
                 MessageBox.Show("Se ha guardado exitosamente");
