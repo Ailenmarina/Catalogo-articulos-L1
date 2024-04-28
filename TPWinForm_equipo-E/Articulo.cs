@@ -18,7 +18,11 @@ namespace CatalogoDeArticulos
         public Categoria Categoria { get; set; }
         public int IdCategoria { get; set; }
      
+<<<<<<< HEAD
         public List<Imagen> Imagenes { get; set; }
+=======
+       public List<Imagen> Imagenes { get; set; }
+>>>>>>> 9a0a28ec4543eb009cccbea9b8f76f8293d8e458
         public decimal Precio { get; set; }
 
         public Articulo()
