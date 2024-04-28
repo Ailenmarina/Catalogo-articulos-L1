@@ -107,6 +107,7 @@
             this.eliminarArticuloToolStripMenuItem.Name = "eliminarArticuloToolStripMenuItem";
             this.eliminarArticuloToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.eliminarArticuloToolStripMenuItem.Text = "Eliminar articulo";
+            this.eliminarArticuloToolStripMenuItem.Click += new System.EventHandler(this.eliminarArticuloToolStripMenuItem_Click);
             // 
             // verDetalleDeArticuloToolStripMenuItem
             // 
@@ -132,7 +133,7 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.administrarToolStripMenuItem.Text = "Administrar";
             // 
             // marcasToolStripMenuItem
@@ -146,7 +147,7 @@
             // administrarToolStripMenuItem1
             // 
             this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
-            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(169, 26);
             this.administrarToolStripMenuItem1.Text = "Administrar";
             // 
             // Frmprincipal

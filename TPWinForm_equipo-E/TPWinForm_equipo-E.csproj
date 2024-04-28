@@ -47,9 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos.cs" />
     <Compile Include="Articulo.cs" />
     <Compile Include="ArticuloServer.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="EliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarArticulo.Designer.cs">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,8 +89,12 @@
     </Compile>
     <Compile Include="Imagen.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="MarcaServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EliminarArticulo.resx">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarArticulo.resx">
       <DependentUpon>FormAgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,12 +1,16 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 
 namespace CatalogoDeArticulos
@@ -35,13 +39,15 @@ namespace CatalogoDeArticulos
             ArticuloServer articuloServer = new ArticuloServer();
             try
             {
-                articulo.Codigo= textCodigoArt.Text;
-                articulo.Nombre= textNombreArt.Text;
-                articulo.Descripcion= textDescripcionArt.Text;
-                articulo.Imagenes = ListaImagenes;
-                articulo.Precio=decimal.Parse(textPrecio.Text);
+                articulo.Codigo = textCodigoArt.Text;
+                articulo.Nombre = textNombreArt.Text;
+                articulo.Descripcion = textDescripcionArt.Text;
+                articulo.IdMarca = int.Parse(cboMarca.Text);
+                articulo.IdCategoria = int.Parse(cboCategoria.Text);
+                articulo.Precio = decimal.Parse(textPrecio.Text);
                 articuloServer.Agregar(articulo);
                 MessageBox.Show("Se ha guardado exitosamente");
+                Close();
             }
             catch (Exception ex)
             {
@@ -60,5 +66,49 @@ namespace CatalogoDeArticulos
         {
 
         }
+
+        private void FormAgregarArticulo_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+                MarcaServer marcaServer = new MarcaServer();
+
+
+                List<Marca> marcas = marcaServer.Mostrar();
+
+
+                cboMarca.Items.Clear();
+
+
+                foreach (Marca marca in marcas)
+                {
+                    cboMarca.Items.Add(marca.Descripcion);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las descripciones de las marcas: {ex.Message}");
+            }
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textIdMarcaArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
+
+
