@@ -65,5 +65,10 @@ namespace CatalogoDeArticulos
                 MessageBox.Show($"Error al cargar la imagen: {ex.Message}");
             }
         }
+
+        private void DgvVerTodosArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
