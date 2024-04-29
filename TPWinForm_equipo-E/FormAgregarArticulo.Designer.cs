@@ -45,8 +45,7 @@
             this.cboCategoria = new System.Windows.Forms.ComboBox();
 
 
-            this.cboMarca = new System.Windows.Forms.ComboBox();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            
 
             this.textIdMarcaArt = new System.Windows.Forms.TextBox();
             this.textIdCategoriaArt = new System.Windows.Forms.TextBox();
