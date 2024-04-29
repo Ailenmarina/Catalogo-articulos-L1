@@ -34,6 +34,7 @@ namespace CatalogoDeArticulos
                     Marca aux = new Marca();
                     aux.ID = (int)Lector["Id"];
                     aux.Descripcion = (string)Lector["Descripcion"];
+                    Lista.Add(aux);
                 }
 
                 Conex.Close();

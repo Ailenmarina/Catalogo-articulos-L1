@@ -81,5 +81,11 @@ namespace CatalogoDeArticulos
             EliminarArticulo ventana=new EliminarArticulo(); ;
             ventana.Show();
         }
+
+        private void ListarBtn_Click(object sender, EventArgs e)
+        {
+            ListarMarca ventana=new ListarMarca();
+            ventana.Show();
+        }
     }
 }

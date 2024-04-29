@@ -40,7 +40,7 @@
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListarBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,16 +139,17 @@
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarToolStripMenuItem1});
+            this.ListarBtn});
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
             this.marcasToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.marcasToolStripMenuItem.Text = "Marcas";
             // 
-            // administrarToolStripMenuItem1
+            // ListarBtn
             // 
-            this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
-            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(169, 26);
-            this.administrarToolStripMenuItem1.Text = "Administrar";
+            this.ListarBtn.Name = "ListarBtn";
+            this.ListarBtn.Size = new System.Drawing.Size(224, 26);
+            this.ListarBtn.Text = "Listar ";
+            this.ListarBtn.Click += new System.EventHandler(this.ListarBtn_Click);
             // 
             // Frmprincipal
             // 
@@ -184,7 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem verDetalleDeArticuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTodosLosArticulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ListarBtn;
     }
 }
 
