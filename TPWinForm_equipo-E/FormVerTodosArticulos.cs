@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CatalogoDeArticulos;
 
 
 namespace CatalogoDeArticulos
@@ -69,6 +70,13 @@ namespace CatalogoDeArticulos
         private void DgvVerTodosArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void DgvVerTodosArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+
+            Articulo Eleccion = (Articulo)DgvVerTodosArticulos.CurrentRow.DataBoundItem;
+            MostrarSiguienteImagen(Eleccion);
         }
     }
 }

@@ -45,6 +45,7 @@
             this.DgvVerTodosArticulos.Size = new System.Drawing.Size(603, 217);
             this.DgvVerTodosArticulos.TabIndex = 0;
             this.DgvVerTodosArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVerTodosArticulos_CellContentClick);
+            this.DgvVerTodosArticulos.SelectionChanged += new System.EventHandler(this.DgvVerTodosArticulos_SelectionChanged);
             // 
             // pictureBoxArticulo
             // 

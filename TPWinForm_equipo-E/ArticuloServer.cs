@@ -23,7 +23,7 @@ namespace CatalogoDeArticulos
             {
                 Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "SELECT A.Id, I.Id AS ImagenId, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, CAST(Precio AS DECIMAL(18, 2)) AS Precio, ImagenUrl FROM ARTICULOS A INNER JOIN IMAGENES I ON A.Id = I.IdArticulo";
+                Comando.CommandText = "SELECT A.Id, I.Id AS ImagenId, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, CAST(Precio AS DECIMAL(18, 2)) AS Precio, ImagenUrl FROM ARTICULOS A INNER JOIN IMAGENES I ON A.Id = I.Id";
                 Comando.Connection = Conex;
                 
 
@@ -41,7 +41,7 @@ namespace CatalogoDeArticulos
                     aux.IdMarca = (int)Lector["IdMarca"];
                     aux.IdCategoria = (int)Lector["IdCategoria"];
                     aux.Precio = (decimal)Lector["Precio"];
-
+                    //
                     Imagen imagen = new Imagen();
                     imagen.ID= (int)Lector["ImagenId"];
                     imagen.ImagenURL = (string)Lector["ImagenUrl"];
