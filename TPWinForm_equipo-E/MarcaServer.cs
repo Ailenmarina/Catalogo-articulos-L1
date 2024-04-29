@@ -20,7 +20,7 @@ namespace CatalogoDeArticulos
 
             try
             {
-                Conex.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+                Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
                 Comando.CommandText = "Select id, Descripcion from MARCAS";
                 Comando.Connection = Conex;
