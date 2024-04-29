@@ -51,6 +51,7 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="ArticuloServer.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaServer.cs" />
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>

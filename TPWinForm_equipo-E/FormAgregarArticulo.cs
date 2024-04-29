@@ -39,21 +39,18 @@ namespace CatalogoDeArticulos
             ArticuloServer articuloServer = new ArticuloServer();
             try
             {
-<<<<<<< HEAD
+
                 articulo.Codigo = textCodigoArt.Text;
                 articulo.Nombre = textNombreArt.Text;
                 articulo.Descripcion = textDescripcionArt.Text;
-                articulo.IdMarca = int.Parse(cboMarca.Text);
-                articulo.IdCategoria = int.Parse(cboCategoria.Text);
+                //articulo.IdMarca = int.Parse(cboMarca.Text);
+                //articulo.IdCategoria = int.Parse(cboCategoria.Text);
+                articulo.Marca.Descripcion=cboMarca.Text;
+                articulo.Categoria.Descripcion = cboCategoria.Text;
                 articulo.Precio = decimal.Parse(textPrecio.Text);
-=======
-                articulo.Codigo= textCodigoArt.Text;
-                articulo.Nombre= textNombreArt.Text;
-                articulo.Descripcion= textDescripcionArt.Text;
-                articulo.IdMarca = int.Parse(textIdMarcaArt.Text);
-                articulo.IdCategoria=int.Parse(textIdCategoriaArt.Text);
-                articulo.Precio=decimal.Parse(textPrecio.Text);
->>>>>>> 9a0a28ec4543eb009cccbea9b8f76f8293d8e458
+
+               
+
                 articuloServer.Agregar(articulo);
                 MessageBox.Show("Se ha guardado exitosamente");
                 Close();
@@ -78,7 +75,7 @@ namespace CatalogoDeArticulos
 
         private void FormAgregarArticulo_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             try
             {
 
@@ -100,8 +97,30 @@ namespace CatalogoDeArticulos
             {
                 MessageBox.Show($"Error al cargar las descripciones de las marcas: {ex.Message}");
             }
-=======
->>>>>>> 9a0a28ec4543eb009cccbea9b8f76f8293d8e458
+            
+            try
+            {
+
+                CategoriaServer CatServer = new CategoriaServer();
+
+
+                List<Categoria> categorias = CatServer.Mostrar();
+
+
+                cboCategoria.Items.Clear();
+
+
+                foreach (Categoria categoria in categorias)
+                {
+                    cboCategoria.Items.Add(categoria.Descripcion);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las descripciones de las marcas: {ex.Message}");
+            }
+
+
 
         }
 
@@ -114,15 +133,14 @@ namespace CatalogoDeArticulos
         {
 
         }
-<<<<<<< HEAD
+
 
         private void cboMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
         }
-=======
->>>>>>> 9a0a28ec4543eb009cccbea9b8f76f8293d8e458
+
     }
 }
 

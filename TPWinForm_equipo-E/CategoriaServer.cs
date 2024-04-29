@@ -8,21 +8,21 @@ using System.Windows.Forms;
 
 namespace CatalogoDeArticulos
 {
-    internal class MarcaServer
+    internal class CategoriaServer
     {
-        public List<Marca> listar()
+        public List<Categoria> listar()
 
         {
-            List<Marca> Lista = new List<Marca>();
+            List<Categoria> Lista = new List<Categoria>();
             SqlConnection Conex = new SqlConnection();
             SqlCommand Comando = new SqlCommand();
             SqlDataReader Lector;
 
             try
             {
-                Conex.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                Conex.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "Select id, Descripcion from MARCAS";
+                Comando.CommandText = "Select id, Descripcion from CATEGORIAS";
                 Comando.Connection = Conex;
 
 
@@ -31,7 +31,7 @@ namespace CatalogoDeArticulos
 
                 while (Lector.Read())
                 {
-                    Marca aux = new Marca();
+                    Categoria aux = new Categoria();
                     aux.ID = (int)Lector["Id"];
                     aux.Descripcion = (string)Lector["Descripcion"];
                 }
@@ -47,10 +47,10 @@ namespace CatalogoDeArticulos
         }
 
 
-        public List<Marca> Mostrar()
+        public List<Categoria> Mostrar()
         {
-            List<Marca> listaMarcas = new List<Marca>();
-            List<Marca> Lista = new List<Marca>();
+            List<Categoria> listaCategorias = new List<Categoria>();
+            List<Categoria> Lista = new List<Categoria>();
             SqlConnection Conex = new SqlConnection();
             SqlCommand Comando = new SqlCommand();
             SqlDataReader Lector;
@@ -58,20 +58,20 @@ namespace CatalogoDeArticulos
             {
                 Conex.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "Select id, Descripcion from MARCAS";
+                Comando.CommandText = "Select id, Descripcion from CATEGORIAS";
                 Comando.Connection = Conex;
 
 
                 Conex.Open();
                 Lector = Comando.ExecuteReader();
-               
+
                 while (Lector.Read())
                 {
-                   
-                    Marca aux = new Marca();
+
+                    Categoria aux = new Categoria();
                     aux.ID = (int)Lector["id"];
                     aux.Descripcion = (string)Lector["Descripcion"];
-                    listaMarcas.Add(aux);
+                    listaCategorias.Add(aux);
                 }
 
 
@@ -81,7 +81,7 @@ namespace CatalogoDeArticulos
                 MessageBox.Show($"Error al cargar las descripciones de las marcas: {ex.Message}");
             }
 
-            return listaMarcas;
+            return listaCategorias;
         }
     }
 }
