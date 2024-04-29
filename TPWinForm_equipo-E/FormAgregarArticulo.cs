@@ -49,7 +49,16 @@ namespace CatalogoDeArticulos
                 articulo.Categoria.Descripcion = cboCategoria.Text;
                 articulo.Precio = decimal.Parse(textPrecio.Text);
 
+<<<<<<< HEAD
                
+=======
+                articulo.Codigo= textCodigoArt.Text;
+                articulo.Nombre= textNombreArt.Text;
+                articulo.Descripcion= textDescripcionArt.Text;
+                articulo.IdMarca = int.Parse(textIdMarcaArt.Text);
+                articulo.IdCategoria=int.Parse(textIdCategoriaArt.Text);
+                articulo.Precio=decimal.Parse(textPrecio.Text);
+>>>>>>> 0defbf2fe76ea84f6bc479e6011ce7c674799582
 
                 articuloServer.Agregar(articulo);
                 MessageBox.Show("Se ha guardado exitosamente");
@@ -97,6 +106,7 @@ namespace CatalogoDeArticulos
             {
                 MessageBox.Show($"Error al cargar las descripciones de las marcas: {ex.Message}");
             }
+<<<<<<< HEAD
             
             try
             {
@@ -119,6 +129,8 @@ namespace CatalogoDeArticulos
             {
                 MessageBox.Show($"Error al cargar las descripciones de las marcas: {ex.Message}");
             }
+=======
+>>>>>>> 0defbf2fe76ea84f6bc479e6011ce7c674799582
 
 
 
