@@ -93,5 +93,11 @@ namespace CatalogoDeArticulos
             AgregarMarca ventana=new AgregarMarca();
             ventana.Show();
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EliminarMarcacs ventana =new EliminarMarcacs();
+            ventana.Show();
+        }
     }
 }

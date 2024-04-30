@@ -104,6 +104,24 @@ namespace CatalogoDeArticulos
             datos.cerrarConexion();
         }
     }
+
+        public void Eliminar(int ID)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from MARCAS where Id = @Id");
+                datos.setearParametro("@Id", ID);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
     }
 
     
