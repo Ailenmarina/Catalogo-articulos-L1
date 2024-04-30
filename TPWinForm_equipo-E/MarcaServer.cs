@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CatalogoDeArticulos;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -84,5 +85,26 @@ namespace CatalogoDeArticulos
 
             return listaMarcas;
         }
+
+        public void Agregar(Marca nuevo)
+    {
+        AccesoDatos datos = new AccesoDatos();
+        try
+        {
+            datos.setearConsulta("insert into MARCAS (Descripcion) values (@Descripcion)");
+            datos.setearParametro("@Descripcion", nuevo.Descripcion);
+            datos.ejecutarAccion();
+        }
+        catch (Exception exe)
+        {
+            throw exe;
+        }
+        finally
+        {
+            datos.cerrarConexion();
+        }
     }
+    }
+
+    
 }

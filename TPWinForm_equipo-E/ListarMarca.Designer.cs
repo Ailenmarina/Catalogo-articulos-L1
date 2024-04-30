@@ -40,7 +40,7 @@
             this.DgvLeerMarcas.Name = "DgvLeerMarcas";
             this.DgvLeerMarcas.RowHeadersWidth = 51;
             this.DgvLeerMarcas.RowTemplate.Height = 24;
-            this.DgvLeerMarcas.Size = new System.Drawing.Size(383, 306);
+            this.DgvLeerMarcas.Size = new System.Drawing.Size(383, 407);
             this.DgvLeerMarcas.TabIndex = 1;
             this.DgvLeerMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLeerMarcas_CellContentClick);
             // 
@@ -48,7 +48,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 338);
+            this.ClientSize = new System.Drawing.Size(398, 452);
             this.Controls.Add(this.DgvLeerMarcas);
             this.Name = "ListarMarca";
             this.Text = "ListarMarca";

@@ -87,5 +87,11 @@ namespace CatalogoDeArticulos
             ListarMarca ventana=new ListarMarca();
             ventana.Show();
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarMarca ventana=new AgregarMarca();
+            ventana.Show();
+        }
     }
 }
